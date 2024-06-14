@@ -1,0 +1,27 @@
+{
+  "version": 1,
+  "author": "Ezhil Bharathi",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "wokwi-arduino-mega", "id": "mega", "top": -76.2, "left": 15.6, "attrs": {} },
+    {
+      "type": "wokwi-7segment",
+      "id": "sevseg1",
+      "top": 216.18,
+      "left": 245.08,
+      "attrs": { "color": "#00ff00", "common": "cathode" }
+    }
+  ],
+  "connections": [
+    [ "mega:GND.2", "sevseg1:COM.2", "black", [ "v83.7", "h11.75" ] ],
+    [ "mega:A0", "sevseg1:A", "green", [ "v74.1", "h15.9" ] ],
+    [ "mega:A1", "sevseg1:B", "green", [ "v64.5", "h44.8" ] ],
+    [ "mega:A2", "sevseg1:C", "green", [ "v54.9", "h64.1", "v153.6", "h-28.8" ] ],
+    [ "mega:A3", "sevseg1:D", "green", [ "v45.3", "h63.95", "v172.8", "h-48" ] ],
+    [ "mega:A4", "sevseg1:E", "green", [ "v35.7", "h64.05", "v192", "h-76.8" ] ],
+    [ "mega:A5", "sevseg1:F", "green", [ "v26.1", "h64.15", "v67.2", "h-76.8" ] ],
+    [ "mega:A6", "sevseg1:G", "green", [ "v16.5", "h64", "v86.4", "h-96" ] ],
+    [ "mega:A7", "sevseg1:DP", "green", [ "v64.5", "h64.1", "v9.6" ] ]
+  ],
+  "dependencies": {}
+}

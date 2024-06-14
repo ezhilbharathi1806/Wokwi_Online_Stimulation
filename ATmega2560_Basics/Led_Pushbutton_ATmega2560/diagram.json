@@ -1,0 +1,39 @@
+{
+  "version": 1,
+  "author": "Ezhil Bharathi",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "wokwi-arduino-mega", "id": "mega", "top": 0, "left": 0, "attrs": {} },
+    {
+      "type": "wokwi-led",
+      "id": "led1",
+      "top": 198,
+      "left": 186.2,
+      "attrs": { "color": "green" }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "r1",
+      "top": 292.8,
+      "left": 220.25,
+      "rotate": 180,
+      "attrs": { "value": "1000" }
+    },
+    {
+      "type": "wokwi-pushbutton",
+      "id": "btn1",
+      "top": 342.2,
+      "left": 249.6,
+      "attrs": { "color": "green" }
+    }
+  ],
+  "connections": [
+    [ "mega:GND.3", "led1:C", "black", [ "v55.5", "h-1.35" ] ],
+    [ "mega:A0", "led1:A", "green", [ "v17.1", "h12.3", "v38.4" ] ],
+    [ "mega:5V", "btn1:2.l", "red", [ "v0" ] ],
+    [ "btn1:1.r", "mega:A8", "green", [ "v-76.8", "h-19" ] ],
+    [ "mega:GND.2", "r1:2", "black", [ "v0" ] ],
+    [ "r1:1", "btn1:1.r", "green", [ "v-0.55", "h37.55" ] ]
+  ],
+  "dependencies": {}
+}
